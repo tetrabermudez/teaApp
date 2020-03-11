@@ -2,12 +2,22 @@ package com.bertamalfitano.teagenerator.model;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "tea")
 public class Tea {
 
-
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "grade")
     private String teaGrade;
+
+    @Column(name = "type")
     private String teaType;
+
+    @Column(name = "country_of_origin")
     private String teaCountryOfOrigin;
 
 
